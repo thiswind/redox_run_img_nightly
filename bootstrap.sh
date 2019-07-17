@@ -7,6 +7,7 @@ banner()
 {
 	echo "|------------------------------------------|"
 	echo "|----- Welcome to the redox bootstrap -----|"
+	echo "|----- changed by thiswind from origin ----|"
 	echo "|------------------------------------------|"
 }
 
