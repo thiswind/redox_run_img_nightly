@@ -5,13 +5,13 @@
 # 
 #         USAGE: ./redox_run.sh 
 # 
-#   DESCRIPTION: 
+#   DESCRIPTION: run latest official released RedoxOS image automatically
 # 
-#       OPTIONS: ---
-#  REQUIREMENTS: ---
-#          BUGS: ---
+#       OPTIONS: linux or mac, not windows
+#  REQUIREMENTS: python3 installed, pip installed
+#          BUGS: 
 #         NOTES: ---
-#        AUTHOR: YOUR NAME (), 
+#        AUTHOR: thiswind (thiswind@gmail.com), 
 #  ORGANIZATION: 
 #       CREATED: 2019/07/17 20:18
 #      REVISION:  ---
@@ -59,4 +59,4 @@ chmod a+x bootstrap.sh
 ./bootstrap.sh -d
 
 # start redox os
-#qemu-system-x86_64 -serial mon:stdio -d cpu_reset -d guest_errors -smp 4 -m 1024 -s -machine q35 -device ich9-intel-hda -device hda-duplex -net nic,model=e1000 -net user -device nec-usb-xhci,id=xhci -device usb-tablet,bus=xhci.0 -drive file=harddrive.bin,format=raw
+qemu-system-x86_64 -serial mon:stdio -d cpu_reset -d guest_errors -smp 4 -m 1024 -s -machine q35 -device ich9-intel-hda -device hda-duplex -net nic,model=e1000 -net user -device nec-usb-xhci,id=xhci -device usb-tablet,bus=xhci.0 -drive file=harddrive.bin,format=raw
