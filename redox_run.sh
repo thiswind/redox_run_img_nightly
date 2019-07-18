@@ -21,7 +21,7 @@ set -o nounset                              # Treat unset variables as an error
 
 # ensure virtualenv
 echo "check if virtualenv installed ...."
-PATH=~/.local/bin:PATH
+PATH="~/.local/bin:$PATH"
 
 if pip list | grep -F virtualenv; then
 	echo "virtualenv is already installed"
@@ -39,8 +39,14 @@ else
 fi
 
 echo "activate venv"
-. ./venv/bin/activate
+activate() {
+	. ./venv/bin/activate
+}
+activate
+
+echo "check python"
 which python
+python -V
 
 # ensure pre-requirements
 pip install -r requirements.txt
