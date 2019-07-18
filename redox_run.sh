@@ -62,7 +62,6 @@ else
 fi
 
 # ensure emulator
-#wget -L -N https://gitlab.redox-os.org/redox-os/redox/raw/master/bootstrap.sh
 chmod a+x bootstrap.sh
 ./bootstrap.sh -d
 
