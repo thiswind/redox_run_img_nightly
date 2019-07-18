@@ -21,6 +21,8 @@ set -o nounset                              # Treat unset variables as an error
 
 # ensure virtualenv
 echo "check if virtualenv installed ...."
+PATH=~/.local/bin:PATH
+
 if pip list | grep -F virtualenv; then
 	echo "virtualenv is already installed"
 else
